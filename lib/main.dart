@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_kakao/pages/main_page.dart';
 import 'package:flutter_kakao/theme.dart';
 
 void main() {
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: true,
       theme: theme(),
+      home: MainPage(),
     );
   }
 }
