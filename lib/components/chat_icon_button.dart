@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 
 class ChatIconButton extends StatelessWidget {
-  const ChatIconButton({super.key});
+  final Icon icon;
+
+  const ChatIconButton({
+    Key? key,
+    required this.icon,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox();
+    return IconButton(onPressed: () {}, icon: icon, iconSize: 25, padding: const EdgeInsets.symmetric(horizontal: 15),);
   }
 }
