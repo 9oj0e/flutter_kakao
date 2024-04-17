@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../models/user.dart';
+
 class OtherChat extends StatelessWidget {
   final String name;
   final String text;
@@ -14,8 +16,36 @@ class OtherChat extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [],
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10.0),
+      child: Row(
+        children: [
+          CircleAvatar(
+            backgroundImage: NetworkImage(friends[0].backgroundImage), // 1
+          ),
+          const SizedBox(width: 10),
+          Flexible(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(name),
+                Container(
+                  child: Text(text),
+                  padding: const EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(13),
+                    color: Colors.white,
+                  ),
+                )
+              ],
+            ),
+          ),
+          const SizedBox(
+            width: 5,
+          ),
+          Text(time, style: const TextStyle(fontSize: 12))
+        ],
+      ),
     );
   }
 }
