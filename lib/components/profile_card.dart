@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_kakao/models/user.dart';
 
+import '../pages/profile_page.dart';
+
 class ProfileCard extends StatelessWidget {
   final User user;
 
@@ -9,7 +11,14 @@ class ProfileCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ProfilePage(user: user),
+          ),
+        );
+      },
       child: ListTile(
         leading: CircleAvatar(
           radius: 20,
