@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_kakao/models/user.dart';
-
 import '../pages/profile_page.dart';
 
 class ProfileCard extends StatelessWidget {
